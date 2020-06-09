@@ -93,18 +93,19 @@ class App extends Component {
       } 
     }; 
     dataShow = () =>{
-      if(this.state.isData){
       let mystring = this.state.url.substring(1, this.state.url.length - 1);
       var link = <a href={ mystring } className = "anchorTag">{ mystring }</a>;
-      $(function(){
-        window.location.href = $('.anchorTag').attr('href');
-    });
-  }
+      if(this.state.isData){
+        return <div>Please authorize here {link}</div>;
+      }
     }
     render() { 
      
       return ( 
-        <div>   
+        <div> 
+            <h1> 
+              GeeksforGeeks 
+            </h1> 
             <h3> 
               File Upload using React! 
             </h3> 
